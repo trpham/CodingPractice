@@ -1,9 +1,10 @@
 # Add Two Number
 
-Given two linked lists representing two non-negative numbers.
-The digits are stored in **reverse order** and each node contains a single digit. 
+Given two linked lists (represent non-negative numbers). 
 
-Add the two numbers and return it as a linked list
+The digits are stored in **reverse order**.
+
+Add them and return a new linked list.
 
 **Example**
 
@@ -11,10 +12,10 @@ Given (**2** -> 4 -> 3) + (**5** -> 6 -> 4)
 
 Return (**7** -> 0 -> 8)
 
-**Solution:** Reverse order: Number 123 -> LinkedList (3 -> 2 -> 1)
+**Solution:** Reverse order: Number 123 -> Linked List (3 -> 2 -> 1)
 
-It's understandable because: 
-- When adding number, reading from right to left, 
+Because: 
+- When adding numbers, reading from right to left, 
 - But in linked list, reading from left to right.
 
 ```java
