@@ -4,15 +4,15 @@ Convert a Roman numeral to an integer.
 
 Input in range 1 - 3999
 
-**Ideas**
+**Ideas**:
 
 Travese backward, and either add or substract each character's Roman value from the result.
 
 Checking on with **natural orientation in a Roman number** (high to low): M D C L X V I. 
 
 Reading right to left:
-- **X**V -> **+10** + 5 (natural)
-- **V**X -> **-5** + 10 (unnatural)
+- **X**V -> **+10** + 5 = 15 (natural)
+- **V**X -> **-5** + 10 = 5 (unnatural)
 
 ```java
 public int romanToInt(String s) {
