@@ -49,6 +49,7 @@ public Node addTwoNumbers(Node A, Node B) {
         // we already have res to keep track of the HEAD
         p = p.next;
     }
+
     return res.next;
 }
 ```
