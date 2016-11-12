@@ -21,7 +21,7 @@ Reverse order: Number 123 -> Linked List (3 -> 2 -> 1), because:
 ```java
 public Node addTwoNumbers(Node A, Node B) {
     
-    // Set up res points to Node 0, to bypass checking on A or B
+    // Set up res points to dummy Node 0, to bypass checking on A or B
     // We can always return res.next as a result
     Node res = new Node(0);
     Node p = res;
