@@ -45,8 +45,8 @@ public Node addTwoNumbers(Node A, Node B) {
         Node n = new Node(val);
         // Link the bridge between p and n
         p.next = n;
-        // Advance p, don't have to worry because 
-        // we already have res to keep track of the HEAD
+        // Advance p, don't have to worry about loosing the path 
+        // because we already have res to keep track of the HEAD
         p = p.next;
     }
 
