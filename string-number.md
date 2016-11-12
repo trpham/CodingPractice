@@ -12,9 +12,9 @@ Given \[1,2,1\] -&gt; Return 2
 
 public int singleNumber(int[] nums) {
 
-    // The key is XOR: 1 ^ 0 = 0, 1 ^ 1 = 1; 0 ^ 0 = 1
-    // [1, 3, 1] -> 1 ^ 3 ^ 1 = (0001 ^ 0011) ^ 0001 
-    //                        = 0010 ^ 0001 = 0001 = 3
+    // The key is XOR in binary: 1 ^ 0 = 0, 1 ^ 1 = 1; 0 ^ 0 = 1
+    // [1, 3, 1] -> 1 ^ 3 ^ 1 
+    // In binary: (0001 ^ 0011) ^ 0001 = 0010 ^ 0001 = 0001 = 3
 
     int result = 0;
 
