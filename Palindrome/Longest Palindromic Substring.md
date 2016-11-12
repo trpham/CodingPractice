@@ -3,8 +3,8 @@
 Find the longest palindromic substring in string s. Assume that the maximum length of s is 1000.
 
 **Ideas**:
-- "babad" -> "bab"
-- "cbbd" -> "bb"
+- "**bab**ad" -> "bab"
+- "c**bb**d" -> "bb"
 
 Expansion from the inside and keep track of the left and right pointers.
 
