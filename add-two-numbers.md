@@ -12,9 +12,9 @@ Given (**2** -> 4 -> 3) + (**5** -> 6 -> 4)
 
 Return (**7** -> 0 -> 8)
 
-**Solution:** Reverse order: Number 123 -> Linked List (3 -> 2 -> 1)
+**Ideas:** 
 
-Because: 
+Reverse order: Number 123 -> Linked List (3 -> 2 -> 1), because: 
 - When adding numbers, reading from right to left, 
 - But in linked list, reading from left to right.
 
