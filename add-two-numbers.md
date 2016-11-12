@@ -27,14 +27,14 @@ public Node addTwoNumbers(Node A, Node B) {
     int carry = 0;
     
     // Check carry == 1 because in such case [5] + [5] -> [1,0]
-    while (A != null || B != null || carry==1) {
+    while (A != null || B != null || carry == 1) {
         
         if (A != null) {
             carry += A.val;
             A = A.next;
         }
             
-        if (B != null){
+        if (B != null) {
             carry += B.val;
             B = B.next;
         }
@@ -43,7 +43,10 @@ public Node addTwoNumbers(Node A, Node B) {
         carry = carry / 10;
         
         Node n = new Node(val);
+        // Link the bridge between p and n
         p.next = n;
+        // Advance p, don't have to worry because 
+        // we already have res to keep track of the HEAD
         p = p.next;
     }
     return res.next;
