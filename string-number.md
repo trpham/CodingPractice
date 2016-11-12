@@ -9,12 +9,13 @@ Your algorithm should have a linear runtime complexity and extra memory.
 Given \[1,2,1\] -&gt; Return 2
 
 ```java
+
 public int singleNumber(int[] nums) {
 
     // The key is XOR: 1 ^ 0 = 0, 1 ^ 1 = 1; 0 ^ 0 = 1
     // [1, 3, 1] -> 1 ^ 3 ^ 1 = (0001 ^ 0011) ^ 0001 
     //                        = 0010 ^ 0001 = 0001 = 3
-    
+
     int result = 0;
 
     for(int i = 0; i < nums.length; i++) {
