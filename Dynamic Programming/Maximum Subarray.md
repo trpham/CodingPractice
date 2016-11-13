@@ -4,8 +4,9 @@ Find the contiguous subarray within an array (at least 1 number) which has the l
 
 **Ideas**:
 
+Use dynamic programming:
+
 - `[-2,1,-3,4,-1,2,1,-5,4]` -> `[4,-1,2,1]` (largest sum = 6)
-- Use dynamic programming
 - `MS[0...i]` is the maximum subarray from index 0 to i (up and **including** i)
 - `MS[0...i]` depends on the previous, `MS[1...i]`
 - If `MS[0...i-1]` is positive -> include it: `MS[0...i] = MS[0...i-1] + A[i]`
