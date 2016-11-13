@@ -2,7 +2,7 @@
 
 Suppose we abstract our file system by a string in the following manner:
 
-The string `"dir\n\tsubdir1\n\tsubdir2\n\t\tfile.ext" `represents:
+The string `"dir\n\tsubdir1\n\tsubdir2\n\t\tfile.txt" `represents:
 
 ```
 dir 
@@ -12,25 +12,25 @@ dir
 ```
 
 - Directory `dir` contains `subdir1` and `subdir2` 
-- subdir2 contains `file.ext`.
+- subdir2 contains `file.txt`.
 
-The string `"dir\n\tsubdir1\n\t\tfile1.ext\n\t\tsubsubdir1\n\tsubdir2\n\t\tsubsubdir2\n\t\t\tfile2.ext"` represents:
+The string `"dir\n\tsubdir1\n\t\tfile1.txt\n\t\tsubsubdir1\n\tsubdir2\n\t\tsubsubdir2\n\t\t\tfile2.txt"` represents:
 
 ```
 dir 
     subdir1 
-        file1.ext 
+        file1.txt 
         subsubdir1 
     subdir2 
         subsubdir2 
-            file2.ext
+            file2.txt
 ```
 
 - Directory `dir` contains `subdir1` and `subdir2`. 
-- `subdir1` contains `file1.ext` and an empty `subsubdir1`.
+- `subdir1` contains `file1.txt` and an empty `subsubdir1`.
 - `subdir2` contains subsubdir2 
-- `subsubdir2` contains `file2.ext`.
-- The longest absolute path is `"dir/subdir2/subsubdir2/file2.ext"`, and its length is 32 (not including the double quotes)
+- `subsubdir2` contains `file2.txt`.
+- The longest absolute path is `"dir/subdir2/subsubdir2/file2.txt"`, and its length is 32 (not including the double quotes)
 
 
 Find the **longest (number of characters) absolute path** to a file within our file system. 
@@ -39,7 +39,7 @@ Find the **longest (number of characters) absolute path** to a file within our f
 
 - The name of a file contains at least a . and an extension.
 - Time complexity is O(n) where n is the size of the input string.
-- `a/aa/aaa/file1.txt` is not the longest file path, if there is another path `aaaaaaaaaaaaaaaaaaaaa/sth.png`.
+- `a/aa/file1.txt` is not the longest file path, if there is another path `aaaaaaaa/file2.txt`.
 - Seperate each file/sub-directory by '\n'. Keep track of **how deep** (**level**) that the file/sub-directory lies on by counting how many `'\t'` upfront. 
 - Reach the end of a file path when seeing a dot (e.g: xyz.txt).
 
