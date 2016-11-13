@@ -2,7 +2,7 @@
 
 Find the contiguous subarray within an array (at least 1 number) which has the largest sum.
 
-**Ideas**
+**Ideas**:
 
 - `[-2,1,-3,4,-1,2,1,-5,4]` -> `[4,-1,2,1]` (largest sum = 6)
 - Use dynamic programming
