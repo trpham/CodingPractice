@@ -40,7 +40,8 @@ Find the **longest (number of characters) absolute path** to a file within our f
 - The name of a file contains at least a . and an extension.
 - Time complexity is O(n) where n is the size of the input string.
 - `a/aa/aaa/file1.txt` is not the longest file path, if there is another path `aaaaaaaaaaaaaaaaaaaaa/sth.png`.
-- Seperate each file/sub-directory by '\n'. Keep track of **how deep** (**level**) that the file/sub-directory lies on by counting how many `'\t'` upfront.
+- Seperate each file/sub-directory by '\n'. Keep track of **how deep** (**level**) that the file/sub-directory lies on by counting how many `'\t'` upfront. 
+- Reach the end of a file path when seeing a dot (e.g: xyz.txt).
 
 ```java
 public int lengthLongestPath(String path) {
@@ -54,7 +55,7 @@ public int lengthLongestPath(String path) {
     int res = 0;
 
     for (String s: arr) {     
-        // If s is:'\tAB', last index of '\t' is 1 -> ABC at level 2.
+        // If s is:'\tAB', last index of '\t' is 1 -> AB at level 2.
         int level = s.lastIndexOf("\t") + 1;
         int lenLevel = m.get(level);
         int lenS = s.substring(level).length();
