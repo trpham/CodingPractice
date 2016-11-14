@@ -31,7 +31,7 @@ public List<List<Integer>> threeSum(int[] nums) {
             int sum = nums[i] + nums[l] + nums[r];
             if (sum == 0) {
                 res.add(Arrays.asList(nums[i], nums[l], nums[r]));
-                // Narrow down range l-r by eliminate duplications
+                // Narrow down range l-r by eliminate duplicates
                 while (l < r) {
                     if (nums[l] == nums[l + 1]) {
                         l++;
@@ -43,6 +43,7 @@ public List<List<Integer>> threeSum(int[] nums) {
                 }
                 l++;
                 r--;
+            // Adjust left or right pointers depends on sum
             } else if (sum > 0) {
                 r--;
             } else {
@@ -53,6 +54,4 @@ public List<List<Integer>> threeSum(int[] nums) {
     
     return res;
 }
-
-
 ```
