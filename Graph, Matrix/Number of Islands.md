@@ -4,7 +4,7 @@ Given a 2D grid of '1' (land) and '0' (water), count the number of islands ('1s'
 
 **Ideas**:
 
-- If see a '1', count it, set it to '0', and explore its neighbors (up, down, left, right). All of its neighbors with '1' will set to 0. 
+- If find a '1', count it, set it to '0', and explore its neighbors (up, down, left, right). All of its neighbors with '1' will set to 0. 
 - This will make sure a '1s' neighborhood only get counted once.
 
 ```java
