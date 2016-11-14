@@ -3,11 +3,12 @@
 Find the contiguous subarray within an array (containing at least one number) which has the largest product.
 
 **Ideas**:
+
 [2,3,-2,4] -> the contiguous subarray [2,3] with largest product = 6.
 
 For product, both "+" and "-" matter.
 
-MAX[i] is maximum product in A[0..i] (up and **including** i)
+MAX[i] is maximum product in A[0....i] (up and **including** i)
 
 MIN[i] is minimum product (for negative case)
 
