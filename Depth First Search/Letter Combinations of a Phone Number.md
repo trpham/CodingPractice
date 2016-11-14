@@ -5,7 +5,7 @@ Given a digit string, return all possible letter combinations that the number co
 **Ideas**:
 
 - "23" -> ["ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf"].
-- DFS
+- DFS between two sets: 2 (a b c) and 3 (d e f)
 
 ```java
 public List <String> letterCombinations(String digits) {
