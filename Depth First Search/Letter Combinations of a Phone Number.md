@@ -1,5 +1,4 @@
 # Letter Combinations of a Phone Number
-------------
 
 Given a digit string, return all possible letter combinations that the number could represent.
 
@@ -12,6 +11,7 @@ Given a digit string, return all possible letter combinations that the number co
 public List <String> letterCombinations(String digits) {
     
     List <String> res = new LinkedList<>();
+
     if (digits.length() < 1) {
         return res;
     }
