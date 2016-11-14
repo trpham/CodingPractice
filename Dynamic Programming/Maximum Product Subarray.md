@@ -8,7 +8,7 @@ Find the contiguous subarray within an array (containing at least one number) wh
 
 For product, both "+" and "-" matter.
 
-MAX[i] is maximum product in A[0...i] (up and **including** i)
+MAX[i] is maximum product in `A[0...i] `(up and **including** i)
 
 MIN[i] is minimum product (for negative case)
 
