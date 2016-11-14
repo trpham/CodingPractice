@@ -144,8 +144,11 @@ You can specify column alignment with one or two colons:
 **Markdown Extra** has a special syntax for definition lists too:
 
 Term 1
+
 Term 2
+
 :   Definition A
+
 :   Definition B
 
 Term 3
