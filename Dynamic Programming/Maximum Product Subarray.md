@@ -8,17 +8,17 @@ Find the contiguous subarray within an array (containing at least one number) wh
 
 For product, both "+" and "-" matter.
 
-MAX[i] is maximum product in A[0....i] (up and **including** i)
+MAX[i] is maximum product in A[0...i] (up and **including** i)
 
 MIN[i] is minimum product (for negative case)
 
-If previsou max > 0 and A[i] > 0 -> A[i] * MAX[i - 1]
+If previsou `max > 0 and A[i] > 0 -> A[i] * MAX[i - 1]`
 
-If previous min < 0 and A[i] < 0 -> A[i] * MIN[i - 1]
+If previous `min < 0 and A[i] < 0 -> A[i] * MIN[i - 1]`
 
-Formula: MAX[i] = Max(A[i], A[i]*MAX[i-1], A[i]*MIN[i-1])
+Formula: `MAX[i] = Max(A[i], A[i] * MAX[i-1], A[i] * MIN[i-1])`
  
-Base case: for one element, MAX[0] = MIN[0] = A[0]`
+Base case: for one element, `MAX[0] = MIN[0] = A[0]``
 
 MIN[i] is a helper for MAX[i]
 
