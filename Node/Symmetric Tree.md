@@ -20,7 +20,6 @@ But the following `[1,2,2,null,3,null,3]` is not:
   2   2
    \   \
    3    3
-
 ```
 - Recursively compare the `outer lefts with the outer rights`, `inner lefts with inner rights`.
 
