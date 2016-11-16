@@ -25,6 +25,4 @@ public Node swapPairs(Node head) {
     
     return res.next;
 }
-
-
 ```
