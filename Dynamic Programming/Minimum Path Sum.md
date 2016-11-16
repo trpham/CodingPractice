@@ -23,10 +23,12 @@ public int minPathSum(int[][] grid) {
     int m = grid[0].length;
     int[][] MPS = new int[n][m];
       
+    // Top row
     for (int j = 1; j < m; j++) {
         MPS[0][j] = grid[0][j] + MPS[0][j - 1];
     }
 
+    // Left column
     for (int i = 1; i < n; i++) {
         MPS[i][0] = grid[i][0] + MPS[i - 1][0];
     }
