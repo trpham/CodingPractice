@@ -5,13 +5,13 @@ Given a m x n grid filled with non-negative numbers, find a path from top left t
 Note: You can only move either down or right at any point in time.
 
 **Ideas**:
-- `MPS[i, j]` is mimized sum along path from `[0][0] to [i][j]`
+- `MPS[i, j]` is minimum sum along the path from `[0][0] to [i][j]`
 
 - Row: i -> n, Column: j -> m
 
 - `MPS[i][j] = min(MPS[i][j-1] + grid[i][j], MPS[i-1][j] + grid[i][j])`
 
-- We not define MPS with size `[n + 1][m + 1]` in most of matrix related problems like this one, because we will get NullExecption within the loop while trying to retrive the values at index n and m.
+- We often do not define MPS with size `[n + 1][m + 1]` in matrix related problems like this one, because we will get NullException while trying to retrive the values at index n and m.
 
 - Base cases: Top row and left column, each is one path, then sum them up
 
