@@ -37,8 +37,8 @@ public int minPathSum(int[][] grid) {
     
     for (int i = 1; i < n; i++) {
         for (int j = 1; j < m; j++) {
-            MPS[i][j] = Math.min(MPS[i][j - 1] + grid[i][j],
-                                 MPS[i - 1][j] + grid[i][j]);
+            MPS[i][j] = Math.min(grid[i][j] + MPS[i][j - 1],
+                                 grid[i][j] + MPS[i - 1][j]);
         }
     }
     
