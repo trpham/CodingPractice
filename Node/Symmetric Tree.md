@@ -27,6 +27,7 @@ But the following `[1,2,2,null,3,null,3]` is not:
 ```java
 public boolean isSymmetric(Node root) {
     if (root == null) return true;
+
     return isSymmetric(root.left, root.right);
 }
 
