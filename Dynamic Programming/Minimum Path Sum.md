@@ -5,7 +5,7 @@ Given a m x n grid filled with non-negative numbers, find a path from top left t
 Note: You can only move either down or right at any point in time.
 
 **Ideas**:
-- `MPS[i, j]` is minimum sum along the path from `[0][0] to [i][j]`
+- `MPS[i, j]` is minimum sum along the path from `[0][0] to [i - 1][j - 1]` (i, j are indices)
 
 - Row: i -> n, Column: j -> m
 
