@@ -9,10 +9,10 @@ How many possible unique paths are there?
 **Ideas**:
 - MPS[i, j] is number of paths from [0][0] to [i - 1][j - 1] (i, j are indices)
 - Row: i -> n, Column: j -> m
-- There is only one path on the top row and left column
 - MPS[i][j] depends on its up and left neighbors.
 - `MPS[i][j] = MPS[i][j - 1] + MPS[i - 1][j]`
-- It's not MPS[n + 1][m + 1] because we are not compare 2 strings.
+- Base case: There is only one path on the top row and left column
+- We not define MPS with size [n + 1][m + 1] because we are not comparing 2 strings, or in need of that extra 0s row/column spaces.
 
 ```java
 public int uniquePaths(int n, int m) {
