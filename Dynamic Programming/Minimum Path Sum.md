@@ -15,7 +15,7 @@ Note: You can only move either down or right at any point in time.
 
 - We often do not define MPS with size `[n + 1][m + 1]` in matrix related problems like this one, because we will get NullException while trying to retrive the values at index n and m.
 
-- Base cases: Top row and left column, each is one path, then sum them up
+- Base cases: Top row and left column, each is one path, so sum them up
 
 
 ```java
