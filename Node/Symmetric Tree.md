@@ -26,12 +26,14 @@ But the following `[1,2,2,null,3,null,3]` is not:
 
 ```java
 public boolean isSymmetric(Node root) {
+
     if (root == null) return true;
 
     return isSymmetric(root.left, root.right);
 }
 
 public boolean isSymmetric(Node l, Node r) {
+
     if (l == null && r == null) return true;
 
     if (l == null || r == null) return false;
