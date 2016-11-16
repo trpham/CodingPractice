@@ -9,6 +9,8 @@ Note: You can only move either down or right at any point in time.
 
 - Row: i -> n, Column: j -> m
 
+- MPS at `[i][j]` is the sum of value at `[i][j]` with either the above or left neighbor MSP, whichever is smaller.
+
 - `MPS[i][j] = min(MPS[i][j-1] + grid[i][j], MPS[i-1][j] + grid[i][j])`
 
 - We often do not define MPS with size `[n + 1][m + 1]` in matrix related problems like this one, because we will get NullException while trying to retrive the values at index n and m.
