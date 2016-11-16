@@ -12,6 +12,7 @@ How many possible unique paths are there?
 - There is only one path on the top row and left column
 - MPS[i][j] depends on its up and left neighbors.
 - `MPS[i][j] = MPS[i][j - 1] + MPS[i - 1][j]`
+- It's not MPS[n + 1][m + 1] because we are not compare 2 strings.
 
 ```java
 public int uniquePaths(int n, int m) {
