@@ -42,5 +42,4 @@ public boolean isSymmetric(Node l, Node r) {
     return isSymmetric(l.left, r.right) 
         && isSymmetric(l.right, r.left);
 }
-
 ```
