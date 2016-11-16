@@ -27,15 +27,19 @@ public class MinStack {
     public MinStack() {
         top = null;
     }
+
     public int getMin() {        
         return top.min;
     }
+
     public int top() {
         return top.val;
     }
+
     public void pop() {
         top = top.next;
     }
+
     public void push(int x) {
         if (top == null) {    
            top = new Node(x, x);
@@ -50,11 +54,13 @@ public class MinStack {
         int val;
         int min;
         Node next;
+
         private Node(int v, int m, Node n) {
             val = v;
             min = m;
             next = n;
         }
+
         private Node (int v, int m) {
             this(v, m, null);
         }
