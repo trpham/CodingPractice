@@ -48,7 +48,7 @@ public int minDepth(Node root) {
         nodes = new ArrayList<>();
 
         for (Node n : curr) {
-            if (n.left == null & n.right == null) {
+            if (n.left == null && n.right == null) {
                 return res;
             }
 
