@@ -15,7 +15,7 @@ Return 4.
 **Ideas**:
 
 
-Version 1: Use `MS` size `[n + 1][m + 1]`, add dummy 0s to the top column and left row.
+Version 1: Use `MS` size `[n + 1][m + 1]`, top row and left column are filled with 0s.
 
 ```java
 public int maximalSquare(char[][] matrix) {
@@ -31,7 +31,7 @@ public int maximalSquare(char[][] matrix) {
     for (int i = 1; i <= n; i++) {
         for (int j = 1; j <= m; j++) {
 
-            // In matrix, index start 1 less
+            // To avoid overflow, index in matrix start 1 less
             if (matrix[i - 1][j - 1] == '1') {
                 MS[i][j] = Math.min(MS[i-1][j-1], Math.min(MS[i-1][j], MS[i][j-1])) + 1;
             } else {
