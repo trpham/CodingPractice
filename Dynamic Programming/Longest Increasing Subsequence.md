@@ -11,6 +11,7 @@ Given an unsorted array of integers, find the length of longest increasing subse
 - Your algorithm should run in `O(n^2)` complexity.
 - `LIS[i]` is the length of longest increasing subsequence from `0`...`i-1`
 
+
 ```java
 public int lengthOfLIS(int[] nums) {
     
