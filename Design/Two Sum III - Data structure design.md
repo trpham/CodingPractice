@@ -38,6 +38,7 @@ public class TwoSum {
     
     public boolean find(int val) {
         for (int i = 0; i < list.size(); i++) {
+            
             int num = list.get(i);
             int dif = val - num;
 
