@@ -22,7 +22,7 @@ A solution set is:
 - DFS
 
 ```java
-public List<List<Integer>> combinationSum2(int[] nums, int target) {
+public List <List<Integer>> combinationSum2(int[] nums, int target) {
     
     // Sort to avoid duplicates
     Arrays.sort(nums);
