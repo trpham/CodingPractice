@@ -45,7 +45,7 @@ public void dfs(int start, int[] nums, int target,
     
     // Call dfs on 'next' index, newTarget
     for (int i = start; i < nums.length; i++) {
-        
+
         int num = nums[i];
 
         if (num > target) {
@@ -55,8 +55,7 @@ public void dfs(int start, int[] nums, int target,
         // A trick to avoid duplicates
         if (i == start || nums[i] != nums[i - 1]) {
             int newTarget = target - num;
-            curr.add(num);
-                
+            curr.add(num);     
             // DFS on i + 1 because duplicates are not allowed
             dfs(i + 1, nums, newTarget, curr, res);
             curr.remove(curr.size() - 1);
