@@ -16,7 +16,7 @@ public List<List<Integer>> threeSum(int[] nums) {
     
     Arrays.sort(nums);
     int n = nums.length;
-    List<List<Integer>> res = new ArrayList<>();
+    List <List<Integer>> res = new ArrayList<>();
     
     for (int i = 0; i < n; i++) {        
         // To avoid cases such as [1,1,1...]
