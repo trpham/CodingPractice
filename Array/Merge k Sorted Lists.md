@@ -6,7 +6,7 @@ Merge k sorted linked lists and return it as one sorted list. Analyze and descri
 
 ```java
 public class Solution {
-    public ListNode mergeKLists(ListNode[] lists) {
+    public Node mergeKLists(Node[] lists) {
         
         if (lists == null || lists.length == 0) {
             return null;
@@ -14,18 +14,11 @@ public class Solution {
         
         int k = lists.length;
         
-        Comparator<ListNode> c = new Comparator<ListNode>() {
+        Comparator<Node> c = new Comparator<Node>() {
+            // +1, 0 or -1
             @Override
-            public int compare(ListNode node1, ListNode node2) {
-                int n1 = node1.val;
-                int n2 = node2.val;
-                if (n1 > n2) {
-                    return 1;
-                } else if (n1 == n2) {
-                    return 0;
-                } else {
-                    return -1;
-                }
+            public int compare(Node node1, Node node2) {
+                return node1.val - node.val;
             }
         };
         
@@ -55,6 +48,69 @@ public class Solution {
         }
         
         return res.next;
+    }
+}
+```
+
+Solution 2: Merge Sort
+
+```java
+public ListNode mergeKLists(ListNode[] lists) {
+    
+    if (lists.length == 0) {
+        return null;
+    }
+    
+    int l = 0;
+    int r = lists.length - 1;
+    
+    while (l < r) {
+
+        // Use left and right pointers to merge
+        while (l < r) {
+            lists[l] = merge2Lists(lists[l], lists[r]);
+            l++;
+            r--;
+        }
+
+        // The range now reduced by half
+        // Repeat until everything merged with lists[0]
+        l = 0;
+    }
+    
+    return lists[0];
+}
+
+public Node merge2Lists(Node A, Node B) {
+    
+    Node res = new Node(0);
+    Node tail = res;
+    
+    while (A != null && B != null) {
+        
+        int a = A.val;
+        int b = B.val;
+        
+        if (a > b) {
+            tail.next = B;
+            B = B.next;
+        } else {
+            tail.next = A;
+            A = A.next;
+        }
+        
+        tail = tail.next;
+    }
+    
+    if (A != null) {
+        tail.next = A;
+    }
+
+    if (B != null) {
+        tail.next = B;
+    }
+    
+    return res.next;
     }
 }
 ```
