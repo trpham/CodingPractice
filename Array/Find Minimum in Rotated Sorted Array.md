@@ -18,7 +18,7 @@ public int findMin(int[] nums) {
 
         // If mid < right, the smallest should be in left...mid 
         // {4 1 2 3} -> 1 < 3 -> {4, 1}
-        // If mid > right, the smallest should be in mid + 1... right 
+        // If mid > right, the smallest should be in mid + 1...right 
         // {3 4 1 2} -> 4 2 -> {1 2}
 
         int mid = (l + r) / 2;
