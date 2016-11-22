@@ -69,28 +69,25 @@ void inOrder (Node root) {
 Recursive:
 
 ```java
-
 public List<Integer> inOrder(Node root) {
+    List <Integer> res = new LinkedList<>();
 
-        List <Integer> res = new LinkedList<>();
-
-        if (root !=null){
+    if (root !=null){
             helper(root);
-        }
- 
-        return result;
     }
  
-    public void helper(Node root){
-        
-        if (p.left!=null) {
-            helper(p.left);
-        }
+    return result;
+}
  
-        res.add(p.val);
- 
-        if (p.right!=null) {
-            helper(p.right);
-        }
+public void helper(Node root){
+    if (p.left!=null) {
+        helper(p.left);    
     }
+ 
+    res.add(p.val);
+ 
+    if (p.right!=null) {
+        helper(p.right);
+    }
+}
 ```
