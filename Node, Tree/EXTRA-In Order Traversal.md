@@ -19,6 +19,7 @@ public List<Integer> inOrder(Node root) {
         cur = stack.peek();
         if (cur.left != null) {
             stack.push(cur.left);
+            cur.left = null;
         } else {
             res.add(cur.val);
             stack.pop();
