@@ -10,19 +10,21 @@ Iterative:
 public void inOrder(Node root) {
 
     Node cur = root;
-    boolean done = false;
     Stack<Integer> stack = new Stack<>();
+    List<Integer> res = new LinkedList<>();
 
-    while (!done) {
-        if (cur != null) {
-            stack.push(cur);
-            cur = cur.left;
-        } else if (!stack.isEmpty()) {
-            cur = stack.pop();
-            print(cur);
-            cur = cur.right;
+    stack.push(root);
+
+    while (!stack.isEmpty()) {
+        cur = stack.peek();
+        if (cur.left != null) {
+            stack.push(cur.left);
         } else {
-            done = true;
+            res.add(cur.val);
+            stack.pop();
+            if (cur.right != null) {
+                cur = cur.right;
+            }
         }
     }
 }
@@ -62,4 +64,32 @@ void inOrder (Node root) {
         }
     }
 }
+```
+
+Recursive:
+
+```java
+
+public List<Integer> inOrder(Node root) {
+
+        List<Integer> res = new LinkedList<Integer>();
+
+        if(root !=null){
+            helper(root);
+        }
+ 
+        return result;
+    }
+ 
+    public void helper(Node root){
+        if(p.left!=null) {
+            helper(p.left);
+        }
+ 
+        res.add(p.val);
+ 
+        if(p.right!=null) {
+            helper(p.right);
+        }
+    }
 ```
