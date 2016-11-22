@@ -7,7 +7,7 @@ Use a stack to store parent pointer of each node.
 Iterative:
 
 ```java
-public void inOrder(Node root) {
+public List<Integer> inOrder(Node root) {
 
     Node cur = root;
     Stack<Integer> stack = new Stack<>();
@@ -72,9 +72,9 @@ Recursive:
 
 public List<Integer> inOrder(Node root) {
 
-        List<Integer> res = new LinkedList<Integer>();
+        List <Integer> res = new LinkedList<>();
 
-        if(root !=null){
+        if (root !=null){
             helper(root);
         }
  
@@ -82,13 +82,14 @@ public List<Integer> inOrder(Node root) {
     }
  
     public void helper(Node root){
-        if(p.left!=null) {
+        
+        if (p.left!=null) {
             helper(p.left);
         }
  
         res.add(p.val);
  
-        if(p.right!=null) {
+        if (p.right!=null) {
             helper(p.right);
         }
     }
