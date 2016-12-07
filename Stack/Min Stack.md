@@ -17,7 +17,7 @@ minStack.pop();     // Stack: 2/1/null
 minStack.top();     -> Returns 2
 minStack.getMin();  -> Returns 1
 ```
-Always keep track of what Node Top considers is the min at the moment, and update accordingly (when top( ) or push( )).
+Always keep track of what node **Top** considers is the min at the moment, and update it accordingly (when `top()` or `push()`).
 
 ```java
 public class MinStack {
