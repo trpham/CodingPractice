@@ -14,7 +14,7 @@ public Node swapPairs(Node head) {
     Node n = res;
     n.next = head;
     
-    while(n.next != null && n.next.next != null) {
+    while (n.next != null && n.next.next != null) {
         Node first = n.next;
         Node second = n.next.next;
         first.next = second.next;
