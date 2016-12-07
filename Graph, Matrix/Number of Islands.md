@@ -1,11 +1,11 @@
 # Number of Islands
 
-Given a 2D grid of '1' (land) and '0' (water), count the number of islands ('1s' neighborhood).  You may assume all four edges of the grid are all surrounded by water.
+Given a 2D grid of `'1'` (land) and `'0'` (water), count the number of islands ('1s' neighborhood).  You may assume all four edges of the grid are all surrounded by water.
 
 **Ideas**:
 
-- If find a '1', count it, set it to '0', and explore its neighbors (up, down, left, right). All of its neighbors with '1' will set to 0. 
-- This will make sure a '1s' neighborhood only get counted once.
+- If find a `1`, count it, set it to `0`, and explore its neighbors (up, down, left, right). All of its neighbors with `1` will set to `0`. 
+- This will make sure a `1s` neighborhood only get counted once.
 
 ```java
 public int numIslands(char[][] grid) {
@@ -36,7 +36,6 @@ public void explore(char[][] grid, int r, int c) {
         explore(grid, r, c + 1);
         explore(grid, r + 1, c);
         explore(grid, r - 1, c);
-        return;
     }
 }
 ```
