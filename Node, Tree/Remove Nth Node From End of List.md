@@ -4,11 +4,11 @@ Given a linked list, remove the nth node from the end of list and return its hea
 
 **Ideas**:
 
-- Given linked list: 1->2->3->4->5, and n = 2.
+- Given linked list: `1->2->3->4->5`, and `n = 2`.
 
-- After removing the second node from the end, the linked list becomes 1->2->3->5.
+- After removing the second node from the end, the linked list becomes `1->2->3->5`.
 
-- Advance the R pointer by n steps, and then move L and R at the same pace til the end of list.
+- Advance the R pointer by n steps, and then move L and R at the same pace till the end of list.
 
 ```java
 public Node removeNthFromEnd(Node head, int n) {
