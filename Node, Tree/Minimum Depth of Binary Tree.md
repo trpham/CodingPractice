@@ -11,6 +11,8 @@ public int minDepth(Node root) {
     
     if (root == null) return 0;
     
+    // Consider the tree has only one element {1}
+    // Don't need to check?
     if (root.left == null) {
         return minDepth(root.right) + 1;
     }
