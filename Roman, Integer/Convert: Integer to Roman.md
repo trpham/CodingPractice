@@ -2,12 +2,12 @@
 
 Convert an integer to a roman numeral.
 
-Input is within the range from 1 to 3999.
+Input is within the range from `1` to `3999`.
 
 **Ideas**
 
 - Make arrays for key:integer and value:roman, from big to small.
-- The key is include special orientations such as CM (900), CD (400), XC (90)... in the arrays.
+- The key is include special orientations such as `CM (900)`, `CD (400)`, `XC (90)`... in the arrays.
 - Subtract the number by the roman letter range that it fits within.
 
 ```java
