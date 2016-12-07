@@ -11,7 +11,7 @@ Reverse digits of an integer.
 ```java
 public int reverse(int x) {
     
-    // Use long, and later convert to int to avoid overflow
+    // Use long to avoid overflow
     long y = 0;
         
     while (x != 0) {
