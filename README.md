@@ -1,1 +1,1 @@
-# LeetCode
+# CodingPratice
